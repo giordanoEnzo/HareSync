@@ -1,7 +1,5 @@
-# HareSync/app/models/cliente.py
-
 from sqlalchemy import Column, Integer, String, ForeignKey
-from . import Base  # Importe a Base do SQLAlchemy adequada ao seu projeto
+from ..db.models_base import Base
 
 class Cliente(Base):
     __tablename__ = 'HSCL'
@@ -15,5 +13,3 @@ class Cliente(Base):
     telefone = Column(String(20))
     contrato = Column(String(50), ForeignKey('HSCT.codigo_contrato'))
 
-    def __repr__(self):
-        return f"<Cliente(codigo_cliente='{self.codigo_cliente}', nome_cliente='{self.nome_cliente}', email='{self.email}')>"
