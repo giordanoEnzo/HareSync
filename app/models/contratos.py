@@ -1,7 +1,5 @@
-# HareSync/app/models/contrato.py
-
 from sqlalchemy import Column, Integer, String, Date, Float, ForeignKey
-from . import Base  
+from ..db.models_base import Base
 
 class Contrato(Base):
     __tablename__ = 'HSCT'
@@ -13,5 +11,3 @@ class Contrato(Base):
     valor_contrato = Column(Float)
     pagamento = Column(String(50))
 
-    def __repr__(self):
-        return f"<Contrato(codigo_contrato='{self.codigo_contrato}', tipo_contrato='{self.tipo_contrato}', valor_contrato={self.valor_contrato})>"
