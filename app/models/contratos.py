@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Date, Float, ForeignKey
+from sqlalchemy import Column, String, Date, Float, ForeignKey
 from ..db.models_base import Base
 
 class Contrato(Base):
