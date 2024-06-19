@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, String, ForeignKey
 from ..db.models_base import Base
 
 class Cliente(Base):
